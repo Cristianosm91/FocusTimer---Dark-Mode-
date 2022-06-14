@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+:root{
+    --bg-color:#FFFFFF;
+    --primary-color: #323238;
+    --primary-color-dark: #FFFFFF;
+    --bg-color-dark: #121214;
+    --bg-color-card: #E1E1E6;
+    --bg-color-Selected: #02799D;
+    --bg-buttonCard-color: transparent;
+    font-size: 62.5%; 
+}
+
+
+.dark-mode:root {
+  --bg-color: #212529;
+  --body-color: #899095;
+  --link-color: #dee2e6;
+  --link-color-hover: #3cc368;
+}
+
+/* .dark-mode:root{
+    --bg-color:#c60505;
+    --primary-color: #323238;
+    --primary-color-dark: #FFFFFF;
+    --bg-color-dark: #121214;
+    --bg-color-card: #E1E1E6;
+    --bg-color-Selected: #02799D;
+    --bg-buttonCard-color: transparent;
+} */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.6rem;
+    /* position: absolute; */
+
+    min-height: 100vh;
+    display: grid;
+    
+}
+
+main {
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--bg-color);
+
+    justify-self: center;
+    align-self: end;
+
+}
+
+.container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    /* width: 821px;
+    height: 336px; */
+    /* left: 25%;
+    top: 50%; */
+    margin-top: 15rem;
+
+    gap: 19.2rem;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+
+    width: 32.1rem;
+    height: 21.3rem;
+   
+}
+
+.time {
+    display: flex;
+    width: 32.1rem;
+    height: 11.7rem;
+
+    margin-bottom: 4.8rem;
+}
+
+.buttons {
+    display: flex;
+
+    width: 31.2rem;
+    height: 4.8rem; 
+    
+    gap: 4rem;
+}
+
+button, .card {
+    background-color: var(--bg-buttonCard-color);
+    border: none;
+    cursor: pointer;
+    fill: #C4C4CC;
+}
+
+.sons {
+  
+    display:grid;
+    grid-template-columns: 13.8rem 13.8rem;
+    grid-template-rows: 15.2rem 15.2rem;
+ 
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+
+    width: 30.8rem;
+    height: 33.6rem;
+
+    font-size: 3px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color-card);
+    /* background-color: #29292E; */
+    /* fill: #323238; */
+    border-radius: 2.4rem;
+}
+
+
+.card-selected  {
+    background-color: var(--bg-color-Selected);
+    
+}
+
+.svg-selected {
+    background-color: var(--bg-color-Selected);
+    fill: white;
+}
+
+
+
+/*dark*/
+
+.hide {
+    display: none;
+  }
+
+.toggleButton{
+    /* position: relative; */
+    position: absolute;
+    justify-self: end;
+    align-self: self-start;
+    top: 10%;
+    right: 5%;
+}
+
+body.dark-theme svg.icon path {
+    fill: #efefef;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--primary-color-dark);
+}
+
+main.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--primary-color-dark);
+}
+
+.dark-card {
+    background-color: #29292E;
+    /* background-color: #29292E; */
+    /* fill: #323238; */
+}
+
+.card-selected-dark {
+    background-color: #0A3442;
+    
+}
+
+body.dark-mode svg path /*.dark-card*/ {
+    fill: #C4C4CC;
+    background-color: #29292E;
+}
+
+
+.svg-darkMode {
+    background-color: #02799D;
+    fill: #C4C4CC;
+}
+
+
+
+.sliderValue {
+    font-size: 10px;
+    color: transparent;
+}
+
+.card-selected .sliderValue {
+    color: white;
+}
+
+.volumeForest,.volumeRain,.volumeCoffee, .volumeFireplace {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 9rem;
+    height: 1rem;
+    background: var(--bg-color);
+    border-radius: 9999px;
+    /* background-image: linear-gradient(var(--primary-color), var(--primary-color)); */
+    /* position: relative;
+    top: 12rem; */
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--bg-color-dark)
+  }
+  
+  /* input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  } */
